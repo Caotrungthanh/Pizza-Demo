@@ -1,0 +1,560 @@
+:root {
+  --mainBlack: #121618;
+  --mainBlackBG: rgba(0,0,0,0.8);
+  --mainGray: #6c757d;
+  --mainWhite: #fff;
+  --mainGreen: rgb(82, 190, 19);
+  --mainFace: #4267b2;
+  --mainTwitter: #1DA1F2;
+  --mainBorderSoDo: #007bff;
+  --mainGoogle: #EC443B;
+  --mainServicesText: #b08432; }
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url("../img/bg_4.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  /*end header*/
+  /*end banner*/
+  /*gioithieu-section*/
+  /*Order Pizza*/
+  /*ftco-sodo*/
+  /*ftco-quanly*/
+  /*login-section*/
+  /*end reponsive*/ }
+  body .ftco-sodo, body .ftco-quanly, body .gioithieu-section, body .login-section, body .ftco-section {
+    position: absolute;
+    top: 100px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%; }
+  body .header {
+    position: fixed;
+    display: flex;
+    width: 100%;
+    background: var(--mainBlack) !important;
+    z-index: 200; }
+    body .header .show-menu-btn {
+      margin-left: auto; }
+    body .header .show-menu-btn, body .header .hide-menu-btn {
+      font-size: 30px;
+      cursor: pointer;
+      display: none;
+      color: var(--mainWhite); }
+      body .header .show-menu-btn:hover, body .header .hide-menu-btn:hover {
+        color: var(--mainGreen); }
+    body .header #check {
+      position: absolute;
+      visibility: hidden;
+      z-index: -1000; }
+    body .header ul {
+      width: 100%;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0; }
+      body .header ul .logo {
+        font-size: 50px; }
+      body .header ul a {
+        color: var(--mainWhite);
+        font-size: 16px;
+        font-weight: 400;
+        letter-spacing: 1px;
+        text-decoration: none;
+        text-transform: uppercase;
+        margin: 0 2rem; }
+        body .header ul a img {
+          position: relative;
+          top: 0;
+          left: 0;
+          width: 150px; }
+        body .header ul a:hover {
+          color: var(--mainGreen) !important; }
+  body .banner .carousel .carousel-inner .carousel-item {
+    height: 100vh; }
+    body .banner .carousel .carousel-inner .carousel-item .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100%;
+      background: var(--mainBlackBG);
+      z-index: 1; }
+    body .banner .carousel .carousel-inner .carousel-item .d-block {
+      height: 100% !important; }
+    body .banner .carousel .carousel-inner .carousel-item .carousel-caption .banner-info-pizza {
+      /*banner-btn*/ }
+      body .banner .carousel .carousel-inner .carousel-item .carousel-caption .banner-info-pizza span {
+        font-family: 'Indie Flower', cursive;
+        font-size: 2.5rem !important;
+        color: var(--mainGreen); }
+      body .banner .carousel .carousel-inner .carousel-item .carousel-caption .banner-info-pizza h2 {
+        font-weight: bold;
+        margin-bottom: 1.5rem; }
+      body .banner .carousel .carousel-inner .carousel-item .carousel-caption .banner-info-pizza p {
+        font-size: 1.2rem; }
+      body .banner .carousel .carousel-inner .carousel-item .carousel-caption .banner-info-pizza .banner-btn .btn-order, body .banner .carousel .carousel-inner .carousel-item .carousel-caption .banner-info-pizza .banner-btn .btn-view {
+        outline: none;
+        border: none;
+        padding: 0.8rem 0.4rem;
+        cursor: pointer;
+        text-transform: uppercase; }
+      body .banner .carousel .carousel-inner .carousel-item .carousel-caption .banner-info-pizza .banner-btn .btn-order {
+        color: var(--mainBlack);
+        background: var(--mainGreen);
+        transition: 0.4s;
+        border: 2px solid var(--mainGreen); }
+        body .banner .carousel .carousel-inner .carousel-item .carousel-caption .banner-info-pizza .banner-btn .btn-order:hover {
+          border: 2px solid var(--mainGreen);
+          background: transparent;
+          color: var(--mainGreen); }
+      body .banner .carousel .carousel-inner .carousel-item .carousel-caption .banner-info-pizza .banner-btn .btn-view {
+        background: transparent;
+        border: 2px solid var(--mainWhite);
+        transition: 0.4s; }
+        body .banner .carousel .carousel-inner .carousel-item .carousel-caption .banner-info-pizza .banner-btn .btn-view:hover {
+          background: var(--mainGreen);
+          border: 2px solid var(--mainGreen); }
+  body .gioithieu-section {
+    color: var(--mainWhite);
+    /*gioithieu-block*/
+    /*gioithieu-wrap*/ }
+    body .gioithieu-section .gioithieu-block {
+      padding: 0;
+      width: auto; }
+    body .gioithieu-section .gioithieu-wrap {
+      height: 100%;
+      background: var(--mainBlack) !important;
+      /*gioithieu-card*/ }
+      body .gioithieu-section .gioithieu-wrap .gioithieu-card {
+        height: 550px;
+        position: relative;
+        perspective: 800px;
+        border-radius: 4px; }
+        body .gioithieu-section .gioithieu-wrap .gioithieu-card .card {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          transform-style: preserve-3d;
+          transition: 0.8s;
+          border-radius: 6px;
+          box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+          cursor: pointer; }
+        body .gioithieu-section .gioithieu-wrap .gioithieu-card .card div {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          backface-visibility: hidden;
+          border-radius: 6px;
+          display: -ms-flexbox;
+          display: box;
+          display: flex;
+          background: var(--mainBlack) !important;
+          justify-content: center;
+          align-items: center;
+          font: 16px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+          -webkit-font-smoothing: antialiased;
+          color: var(--mainWhite); }
+        body .gioithieu-section .gioithieu-wrap .gioithieu-card .card .front img {
+          height: 100%;
+          background-size: cover;
+          background-position: center center; }
+        body .gioithieu-section .gioithieu-wrap .gioithieu-card .card .back {
+          -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+          padding: 2rem 6rem; }
+        body .gioithieu-section .gioithieu-wrap .gioithieu-card .card.flipped {
+          -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg); }
+  body .ftco-section {
+    /*heading-section*/
+    /*container-wrap*/
+    /*Pricing*/ }
+    body .ftco-section .heading-section {
+      color: var(--mainWhite); }
+    body .ftco-section .container-wrap .services-wrap .img {
+      width: 50% !important;
+      display: block;
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat; }
+    body .ftco-section .container-wrap .services-wrap .text {
+      width: 50%;
+      background: var(--mainBlackBG);
+      position: relative; }
+      body .ftco-section .container-wrap .services-wrap .text h3 {
+        color: var(--mainWhite);
+        font-size: 1.5rem; }
+      body .ftco-section .container-wrap .services-wrap .text p {
+        color: var(--mainGray);
+        font-size: 1rem; }
+      body .ftco-section .container-wrap .services-wrap .text .price span {
+        color: var(--mainGreen); }
+      body .ftco-section .container-wrap .services-wrap .text .price .btn-white {
+        border: 1px solid var(--mainWhite);
+        border-radius: 0;
+        font: 400 1rem;
+        color: var(--mainWhite); }
+        body .ftco-section .container-wrap .services-wrap .text .price .btn-white:hover {
+          border: 1px solid var(--mainGreen);
+          background: var(--mainGreen);
+          color: var(--mainBlack); }
+    body .ftco-section .pricing-entry {
+      width: 100%;
+      display: block;
+      margin-bottom: 30px; }
+      body .ftco-section .pricing-entry .img {
+        width: 60px;
+        height: 60px;
+        background-size: cover;
+        background-position: center center;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        border-radius: 50%; }
+      body .ftco-section .pricing-entry .desc {
+        width: calc(100% - 60px); }
+        body .ftco-section .pricing-entry .desc p {
+          margin-bottom: 0; }
+        body .ftco-section .pricing-entry .desc .text {
+          width: 100%;
+          display: block;
+          position: relative;
+          z-index: 0; }
+          body .ftco-section .pricing-entry .desc .text::after {
+            position: absolute;
+            bottom: 30%;
+            left: 0;
+            right: 0;
+            content: '';
+            width: 100%;
+            height: 1px;
+            border-bottom: 1px dashed var(--mainGreen);
+            z-index: 1; }
+          body .ftco-section .pricing-entry .desc .text h3 {
+            width: calc(100% - 80px);
+            font-size: 18px;
+            z-index: 3;
+            color: var(--mainWhite);
+            opacity: 0.8; }
+            body .ftco-section .pricing-entry .desc .text h3 span {
+              background: var(--mainDarken);
+              padding-right: 10px; }
+          body .ftco-section .pricing-entry .desc .text .price {
+            z-index: 3;
+            width: 80px;
+            color: var(--mainGreen);
+            text-align: right;
+            background: var(--mainDarken);
+            font-size: 16px; }
+        body .ftco-section .pricing-entry .desc .text-price p {
+          color: var(--mainGray); }
+  body .ftco-sodo {
+    /*tab-left*/
+    /*tab-right*/ }
+    body .ftco-sodo .tab-left, body .ftco-sodo .tab-right {
+      height: 100%;
+      margin: 0;
+      /*tablink*/ }
+      body .ftco-sodo .tab-left .tablink, body .ftco-sodo .tab-right .tablink {
+        background-color: #555;
+        color: white;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 16px;
+        font-size: 17px;
+        width: 30%; }
+        body .ftco-sodo .tab-left .tablink:hover, body .ftco-sodo .tab-right .tablink:hover {
+          background-color: #777; }
+      body .ftco-sodo .tab-left .tablink_Left--Left, body .ftco-sodo .tab-left .tablink_Right--Left, body .ftco-sodo .tab-right .tablink_Left--Left, body .ftco-sodo .tab-right .tablink_Right--Left {
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px; }
+      body .ftco-sodo .tab-left .tablink_Left--Right, body .ftco-sodo .tab-left .tablink_Right--Right, body .ftco-sodo .tab-right .tablink_Left--Right, body .ftco-sodo .tab-right .tablink_Right--Right {
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px; }
+      body .ftco-sodo .tab-left .tabcontent, body .ftco-sodo .tab-right .tabcontent {
+        color: white;
+        display: none;
+        padding: 100px 15px 10px 15px;
+        height: 100%; }
+    body .ftco-sodo .tab-left .body-tab-left {
+      /*Dat Ban*/ }
+      body .ftco-sodo .tab-left .body-tab-left .DatBan .tang {
+        color: var(--mainWhite); }
+        body .ftco-sodo .tab-left .body-tab-left .DatBan .tang .tang-block {
+          width: 100%; }
+        body .ftco-sodo .tab-left .body-tab-left .DatBan .tang .ban {
+          width: 80px;
+          position: relative;
+          text-align: center;
+          margin: 5px;
+          padding: 15px 0;
+          cursor: pointer; }
+          body .ftco-sodo .tab-left .body-tab-left .DatBan .tang .ban .img {
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            margin: 0 auto;
+            width: 60px;
+            height: 60px; }
+          body .ftco-sodo .tab-left .body-tab-left .DatBan .tang .ban .check-circle {
+            position: absolute;
+            top: 2%;
+            right: 7%;
+            display: none; }
+      body .ftco-sodo .tab-left .body-tab-left .DatThucDon .DatThucDon-wrap .DatThucDon-img {
+        display: block;
+        width: 140px;
+        height: 140px;
+        margin: 0 auto;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        border-radius: 50%;
+        background-size: cover;
+        background-position: center center; }
+      body .ftco-sodo .tab-left .body-tab-left .DatThucDon .DatThucDon-wrap .text h3 {
+        font-size: 22px; }
+        body .ftco-sodo .tab-left .body-tab-left .DatThucDon .DatThucDon-wrap .text h3 a {
+          color: var(--mainWhite);
+          text-decoration: none; }
+      body .ftco-sodo .tab-left .body-tab-left .DatThucDon .DatThucDon-wrap .text p {
+        color: var(--mainGray); }
+        body .ftco-sodo .tab-left .body-tab-left .DatThucDon .DatThucDon-wrap .text p .btn-white {
+          border: 1px solid var(--mainWhite);
+          border-radius: 0;
+          color: var(--mainWhite);
+          outline: none; }
+          body .ftco-sodo .tab-left .body-tab-left .DatThucDon .DatThucDon-wrap .text p .btn-white:hover {
+            background: var(--mainGreen);
+            color: var(--mainBlack);
+            border: 1px solid var(--mainGreen); }
+      body .ftco-sodo .tab-left .body-tab-left .DatThucDon .DatThucDon-wrap .text .price {
+        font-size: 16px;
+        font-weight: 400; }
+        body .ftco-sodo .tab-left .body-tab-left .DatThucDon .DatThucDon-wrap .text .price span {
+          color: var(--mainGreen); }
+    body .ftco-sodo .tab-left .DatBan .nav-link-wrap .nav-pills .nav-link.active, body .ftco-sodo .tab-left .DatBan .nav-link-wrap .nav-pills .show > .nav-link, body .ftco-sodo .tab-left .DatThucDon .nav-link-wrap .nav-pills .nav-link.active, body .ftco-sodo .tab-left .DatThucDon .nav-link-wrap .nav-pills .show > .nav-link {
+      border: 1px solid var(--mainBorderSoDo); }
+    body .ftco-sodo .tab-left .DatBan .nav-link-wrap .nav-pills .nav-link, body .ftco-sodo .tab-left .DatThucDon .nav-link-wrap .nav-pills .nav-link {
+      border: 1px solid;
+      margin: 0 10px 0 0; }
+    body .ftco-sodo .tab-right {
+      position: relative;
+      color: var(--mainWhite);
+      width: 100%;
+      height: 100%;
+      /*ChiTiet*/
+      /*ChiTiet-right-footer*/ }
+      body .ftco-sodo .tab-right .ChiTiet {
+        /*ChiTiet-right-header*/ }
+        body .ftco-sodo .tab-right .ChiTiet .ChiTiet-right-header {
+          height: 40px;
+          width: 100%;
+          display: inline-flex;
+          white-space: nowrap;
+          padding: 5px;
+          /*img*/ }
+          body .ftco-sodo .tab-right .ChiTiet .ChiTiet-right-header .img {
+            width: 25px;
+            height: 25px;
+            background-size: 25px !important;
+            background-repeat: no-repeat;
+            display: block; }
+          body .ftco-sodo .tab-right .ChiTiet .ChiTiet-right-header .ten-ban {
+            font-size: large;
+            margin-left: 10px; }
+        body .ftco-sodo .tab-right .ChiTiet .ChiTiet-right-body .ChiTiet-details {
+          height: 100%;
+          overflow-y: scroll;
+          height: 300px;
+          width: 100%;
+          padding: 0; }
+          body .ftco-sodo .tab-right .ChiTiet .ChiTiet-right-body .ChiTiet-details .table {
+            margin-bottom: 0;
+            width: 100%;
+            max-width: 100%;
+            /*thead*/
+            /*tbody*/ }
+            body .ftco-sodo .tab-right .ChiTiet .ChiTiet-right-body .ChiTiet-details .table .row {
+              padding: 0;
+              width: 100%; }
+            body .ftco-sodo .tab-right .ChiTiet .ChiTiet-right-body .ChiTiet-details .table thead {
+              display: table-header-group;
+              vertical-align: middle;
+              border-color: initial; }
+              body .ftco-sodo .tab-right .ChiTiet .ChiTiet-right-body .ChiTiet-details .table thead tr {
+                vertical-align: inherit;
+                border-color: inherit; }
+                body .ftco-sodo .tab-right .ChiTiet .ChiTiet-right-body .ChiTiet-details .table thead tr th {
+                  text-align: center;
+                  vertical-align: bottom; }
+            body .ftco-sodo .tab-right .ChiTiet .ChiTiet-right-body .ChiTiet-details .table tbody {
+              display: table-header-group;
+              vertical-align: middle;
+              border-color: initial; }
+      body .ftco-sodo .tab-right .ChiTiet-footer {
+        position: absolute;
+        top: 100%;
+        width: 100%;
+        white-space: nowrap;
+        padding: 5px; }
+        body .ftco-sodo .tab-right .ChiTiet-footer .LuuMonAn-Info .row {
+          width: 100%; }
+  body .ftco-quanly {
+    width: 100%;
+    margin: 0;
+    /*modal-dialog*/
+    /*table-content*/ }
+    body .ftco-quanly .modal-dialog {
+      width: 100%;
+      height: 100%;
+      margin: auto; }
+      body .ftco-quanly .modal-dialog .modal-content .modal-footer .btn {
+        width: 100%; }
+    body .ftco-quanly .table-content {
+      overflow-y: scroll;
+      height: 520px;
+      width: 100%;
+      padding: 0; }
+      body .ftco-quanly .table-content .table {
+        margin-bottom: 0;
+        width: 100%;
+        max-width: 100%;
+        /*thead*/
+        /*tbody*/ }
+        body .ftco-quanly .table-content .table .row {
+          padding: 0;
+          width: 100%; }
+        body .ftco-quanly .table-content .table thead {
+          display: table-header-group;
+          vertical-align: middle;
+          border-color: initial; }
+          body .ftco-quanly .table-content .table thead tr {
+            vertical-align: inherit;
+            border-color: inherit; }
+            body .ftco-quanly .table-content .table thead tr th {
+              text-align: center;
+              vertical-align: bottom; }
+        body .ftco-quanly .table-content .table tbody {
+          display: table-header-group;
+          vertical-align: middle;
+          border-color: initial; }
+  body .login-section {
+    /*login-item*/ }
+    body .login-section .login-item {
+      /*login*/
+      /*login-form*/ }
+      body .login-section .login-item .login {
+        width: 100%;
+        display: block;
+        padding: 0.8rem 1rem;
+        margin-bottom: 1.5rem;
+        text-decoration: none;
+        cursor: pointer;
+        border: none;
+        color: var(--mainWhite) !important;
+        outline: none; }
+        body .login-section .login-item .login i {
+          font-size: 1.4rem;
+          margin: 1rem; }
+        body .login-section .login-item .login:hover {
+          opacity: 0.8; }
+      body .login-section .login-item .login-face {
+        background: var(--mainFace); }
+      body .login-section .login-item .login-google {
+        background: var(--mainGoogle); }
+      body .login-section .login-item .login-twitter {
+        background: var(--mainTwitter); }
+      body .login-section .login-item h4 {
+        color: var(--mainWhite);
+        font-size: 2rem; }
+      body .login-section .login-item .login-form {
+        /*form-group*/ }
+        body .login-section .login-item .login-form .form-group {
+          position: relative;
+          width: 100%;
+          display: block;
+          /*form-control*/
+          /*btn*/ }
+          body .login-section .login-item .login-form .form-group .form-control {
+            border: transparent !important;
+            border-bottom: 1px solid var(--mainGray) !important;
+            height: 58px !important;
+            padding-left: 0;
+            padding-right: 0;
+            background: transparent !important;
+            color: rgba(255, 255, 255, 0.9) !important;
+            font-size: 13px;
+            border-radius: 0px;
+            box-shadow: none !important; }
+          body .login-section .login-item .login-form .form-group .btn {
+            border-radius: 0;
+            background: var(--mainGreen);
+            outline: none;
+            border: 1px solid var(--mainGreen);
+            font-size: 1rem;
+            font-weight: 500; }
+            body .login-section .login-item .login-form .form-group .btn:hover, body .login-section .login-item .login-form .form-group .btn:focus {
+              border: 1px solid var(--mainGreen);
+              color: var(--mainGreen);
+              background: transparent; }
+  @media screen and (max-width: 1200px) {
+    body {
+      /*end header*/
+      /*end banner*/ }
+      body .header .show-menu-btn, body .header .hide-menu-btn {
+        display: block !important;
+        transition: 0.4s;
+        padding: 0 10px; }
+      body .header ul {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 100%;
+        height: 100vh;
+        background: var(--mainBlack);
+        text-align: center;
+        transition: 0.7s;
+        padding: 100px 0 !important;
+        z-index: 1000; }
+        body .header ul a {
+          display: block;
+          padding: 20px 0; }
+        body .header ul .hide-menu-btn {
+          position: absolute;
+          top: 10px;
+          right: 10px; }
+        body .header ul .logo {
+          display: none !important; }
+      body .header #check:checked ~ ul {
+        right: 0 !important; }
+      body .banner .carousel-item {
+        height: auto; }
+        body .banner .carousel-item img {
+          height: 100vh; }
+      body .banner .img-pizza img {
+        width: 300px;
+        height: 300px;
+        padding: 20px 0; }
+      body .ftco-sodo, body .ftco-quanly, body .gioithieu-section, body .login-section, body .ftco-section {
+        position: absolute;
+        top: 80px;
+        bottom: 0;
+        left: 0; } }
+  @media screen and (max-width: 990px) {
+    body .services-wrap {
+      width: 100%; } }
+
+/*body*/
+
+/*# sourceMappingURL=index.css.map */

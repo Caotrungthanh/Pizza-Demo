@@ -1,0 +1,886 @@
+:root
+{
+    --mainBlack: #121618;
+    --mainBlackBG: rgba(0,0,0,0.8);
+    --mainGray: #6c757d;
+    --mainWhite: #fff;  
+    --mainGreen: rgb(82, 190, 19);
+    --mainFace: #4267b2;
+    --mainTwitter: #1DA1F2;
+    --mainBorderSoDo: #007bff;
+    --mainGoogle: #EC443B;
+    --mainServicesText: #b08432;
+}
+
+@mixin border-radius($radius) 
+{
+    -webkit-border-radius: $radius;
+       -moz-border-radius: $radius;
+        -ms-border-radius: $radius;
+            border-radius: $radius;
+}
+@mixin transition($transition) 
+{
+    -moz-transition:    all $transition ease;
+    -o-transition:      all $transition ease;
+    -webkit-transition: all $transition ease;
+    -ms-transition: 	all $transition ease;
+    transition:         all $transition ease;
+}
+
+body
+{
+    margin: 0;
+    padding: 0;
+    background-image: url('../img/bg_4.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    .ftco-sodo, .ftco-quanly, .gioithieu-section, .login-section, .ftco-section
+    {
+        position: absolute;
+        top: 100px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+    }
+
+    .header
+    {   
+        position: fixed;
+        display: flex;
+        width: 100%;
+        background: var(--mainBlack) !important;
+        z-index: 200;
+
+        .show-menu-btn
+        {
+            margin-left: auto;
+        }
+
+        .show-menu-btn, .hide-menu-btn
+        {
+            font-size: 30px;
+            cursor: pointer;
+            display: none;
+            color: var(--mainWhite);
+            &:hover
+            {
+                color: var(--mainGreen);
+            }
+        }
+
+        #check
+        {
+            position: absolute;
+            visibility: hidden;
+            z-index: -1000;
+        }
+
+
+        ul
+        {
+            width: 100%;
+            height: 100%;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0;
+            .logo
+            {
+                font-size: 50px;
+            }
+            a
+            {
+                color: var(--mainWhite);
+                font-size: 16px;
+                font-weight: 400;
+                letter-spacing: 1px;
+                text-decoration: none;
+                text-transform: uppercase;
+                margin: 0 2rem;
+                img
+                {
+                    position: relative;
+                    top: 0;
+                    left: 0;
+                    width: 150px;
+                }
+                &:hover
+                {
+                    color: var(--mainGreen) !important;
+                }
+            }
+        } 
+    }/*end header*/
+
+    .banner
+    {
+        .carousel
+        {
+            .carousel-inner
+            {
+                .carousel-item
+                {
+                    height: 100vh;
+                    .overlay
+                    {
+                        position: absolute;
+                        top: 0;
+                        left: 0; 
+                        width: 100vw;
+                        height: 100%;
+                        background: var(--mainBlackBG);
+                        z-index: 1;
+                    }
+                    .d-block
+                    {
+                        height: 100% !important;
+                    }
+                    .carousel-caption
+                    {
+                        .banner-info-pizza
+                        {
+                            span
+                            {
+                                font-family: 'Indie Flower', cursive;
+                                font-size: 2.5rem !important;
+                                color: var(--mainGreen);
+                            }
+                            h2
+                            {
+                                font-weight: bold;
+                                margin-bottom: 1.5rem;
+                            }
+                            p
+                            {
+                                font-size: 1.2rem;
+                            }
+                            .banner-btn
+                            {
+                                .btn-order, .btn-view
+                                {
+                                    outline: none;
+                                    border: none;
+                                    padding: 0.8rem 0.4rem;
+                                    cursor: pointer;
+                                    text-transform: uppercase;
+                                }
+                                .btn-order
+                                {
+                                    color: var(--mainBlack);
+                                    background: var(--mainGreen);
+                                    transition: 0.4s;
+                                    border: 2px solid var(--mainGreen);
+                                    &:hover
+                                    {
+                                        border: 2px solid var(--mainGreen);
+                                        background: transparent;
+                                        color: var(--mainGreen);
+                                    }
+                                }
+                                .btn-view
+                                {
+                                    background: transparent;
+                                    border: 2px solid var(--mainWhite);
+                                    transition: 0.4s;
+                                    &:hover
+                                    {
+                                        background: var(--mainGreen);
+                                        border: 2px solid var(--mainGreen);
+                                    }
+                                }
+                            }/*banner-btn*/
+                        }
+                    }
+                }
+            }
+        }
+
+    }/*end banner*/
+
+    .gioithieu-section
+    {
+        color: var(--mainWhite);
+        .gioithieu-block
+        {
+            padding: 0;
+            width: auto;
+        }/*gioithieu-block*/
+
+        .gioithieu-wrap
+        {
+            height: 100%;
+            background: var(--mainBlack) !important;
+            .gioithieu-card
+            {
+                height: 550px;
+                position: relative;
+                perspective: 800px;
+                border-radius: 4px;
+                .card 
+                {
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    transform-style: preserve-3d;
+                    transition: 0.8s;
+                    border-radius: 6px;
+                    box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+                    cursor: pointer;
+                }
+                .card div 
+                {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    backface-visibility: hidden;
+                    border-radius: 6px;
+                    display: -ms-flexbox;
+                    display: box;
+                    display: flex;
+                    background: var(--mainBlack) !important;
+                    justify-content: center;
+                    align-items: center;
+                    font: 16px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+                    -webkit-font-smoothing: antialiased;
+                    color: var(--mainWhite);
+                }
+                .card .front
+                {
+                    img
+                    {
+                        height: 100%;
+                        background-size: cover;
+                        background-position: center center;
+                    }
+                } 
+                .card .back 
+                {
+                    -webkit-transform: rotateY(180deg);
+                    transform: rotateY(180deg);
+                    padding: 2rem 6rem;
+                }
+                .card.flipped 
+                {
+                    -webkit-transform: rotateY(180deg);
+                    transform: rotateY(180deg);
+                }                  
+            }/*gioithieu-card*/
+        }/*gioithieu-wrap*/
+    }/*gioithieu-section*/
+
+     .ftco-section
+    {
+        .heading-section
+        {
+            color: var(--mainWhite);
+        }/*heading-section*/
+
+        .container-wrap
+        {
+            .services-wrap
+            {
+                .img
+                {
+                    width: 50% !important;
+                    display: block;
+                    background-size: cover;
+                    background-position: center center;
+                    background-repeat: no-repeat;
+                }
+                .text
+                {
+                    width: 50%;
+                    background: var(--mainBlackBG);
+                    position: relative;
+                    h3
+                    {
+                        color: var(--mainWhite);
+                        font-size: 1.5rem;
+                    }
+                    p
+                    {
+                        color: var(--mainGray);
+                        font-size: 1rem;
+                    }
+                    .price
+                    {
+                        span
+                        {
+                            color: var(--mainGreen);
+                        }
+                        .btn-white 
+                        {
+                            border: 1px solid var(--mainWhite);
+                            border-radius: 0;
+                            font: 400 1rem ;
+                            color: var(--mainWhite);
+                            &:hover
+                           {
+                                border: 1px solid var(--mainGreen);
+                                background: var(--mainGreen);
+                                color: var(--mainBlack);
+                            }
+                        }
+                    }
+                }
+            }
+        }/*container-wrap*/
+
+        .pricing-entry
+        {
+            width: 100%;
+            display: block;
+            margin-bottom: 30px;
+            .img
+            {
+                width: 60px;
+                height: 60px;
+                background-size: cover;
+                background-position: center center;
+                @include border-radius(50%);     
+            }
+            .desc
+            {
+                width: calc(100% - 60px);
+                p
+                {
+                    margin-bottom: 0;
+                }
+                .text
+                {
+                    width: 100%;
+                    display: block;
+                    position: relative;
+                    z-index: 0;
+                    &::after
+                    {
+                        position: absolute;
+                        bottom: 30%;
+                        left: 0;
+                        right: 0;
+                        content: '';
+                        width: 100%;
+                        height: 1px;
+                        border-bottom: 1px dashed var(--mainGreen);
+                        z-index: 1;
+                    }
+                    h3
+                    {
+                        width: calc(100% - 80px);
+                        font-size: 18px;
+                        z-index: 3;
+                        color: var(--mainWhite);
+                        opacity: 0.8;
+                        span
+                        {
+                            background: var(--mainDarken);
+                            padding-right: 10px;
+                        }
+                    }
+                    .price
+                    {
+                        z-index: 3;
+                        width: 80px;
+                        color: var(--mainGreen);
+                        text-align: right;
+                        background:var(--mainDarken);
+                        font-size: 16px;
+                    }
+                }
+                .text-price
+                {
+                    p
+                    {
+                        color: var(--mainGray);
+                    }
+                }
+            }
+        }/*Pricing*/
+    }/*Order Pizza*/
+
+    .ftco-sodo
+    {
+        .tab-left, .tab-right
+        {
+            height: 100%;
+            margin: 0;
+            .tablink 
+            {         
+                background-color: #555;
+                color: white;
+                float: left;
+                border: none;
+                outline: none;
+                cursor: pointer;
+                padding: 14px 16px;
+                font-size: 17px;
+                width: 30%;
+                &:hover 
+                {
+                    background-color: #777;
+                }
+            }/*tablink*/
+
+            .tablink_Left--Left, .tablink_Right--Left
+            {
+                border-top-left-radius: 10px;
+                border-bottom-left-radius: 10px;
+            }
+      
+            .tablink_Left--Right, .tablink_Right--Right
+            {
+                border-top-right-radius: 10px;
+                border-bottom-right-radius: 10px;
+            }       
+    
+            .tabcontent 
+            {
+                color: white;
+                display: none;
+                padding: 100px 15px 10px 15px;
+                height: 100%;
+            }
+        }
+
+        .tab-left
+        {   
+            .body-tab-left
+            {
+                .DatBan
+                {
+                    .tang
+                    {
+                        color: var(--mainWhite);
+                        .tang-block
+                        {
+                            width: 100%;
+                        }
+                        .ban
+                        {
+                            width: 80px;
+                            position: relative;
+                            text-align: center;
+                            margin: 5px;
+                            padding: 15px 0;
+                            cursor: pointer;
+                            .img
+                            {
+                                background-size: 100% 100%;
+                                background-repeat: no-repeat;
+                                margin: 0 auto;
+                                width: 60px;
+                                height: 60px;
+                            }
+                            .check-circle
+                            {
+                                position: absolute;
+                                top: 2%;
+                                right: 7%;
+                                display: none;
+                            }   
+                        }
+                    }
+                }/*Dat Ban*/
+
+                .DatThucDon
+                {
+                    .DatThucDon-wrap
+                    {
+                        .DatThucDon-img
+                        {
+                            display: block;
+                            width: 140px;
+                            height: 140px;
+                            margin: 0 auto;
+                            @include border-radius(50%);
+                            background-size: cover;
+                            background-position: center center;
+                        }
+
+                        .text
+                        {
+                            h3
+                            {
+                                font-size: 22px;
+                                a   
+                                {
+                                    color: var(--mainWhite);
+                                    text-decoration: none;
+                                }
+                            }
+                            p
+                            {
+                                color: var(--mainGray);
+                                .btn-white
+                                {   
+                                    border: 1px solid var(--mainWhite);
+                                    border-radius: 0;
+                                    color: var(--mainWhite);
+                                    outline: none;
+                                    &:hover
+                                    {
+                                        background: var(--mainGreen);
+                                        color: var(--mainBlack);
+                                        border: 1px solid var(--mainGreen);
+                                    }
+                                }
+                            }
+                            .price
+                            {
+                                font-size: 16px;
+                                font-weight: 400;
+                                span
+                                {      
+                                    color: var(--mainGreen);
+                                }   
+                            }
+                        }
+                    }            
+                }
+            }
+
+            .DatBan, .DatThucDon
+            {
+            .nav-link-wrap 
+            {
+                .nav-pills .nav-link.active, .nav-pills .show>.nav-link
+                {
+
+                    border: 1px solid var(--mainBorderSoDo);
+                }
+                .nav-pills .nav-link 
+                {
+                    border: 1px solid;
+                    margin: 0 10px 0 0;
+                }
+            }
+            }
+        }/*tab-left*/
+
+        .tab-right
+        {
+            position: relative;
+            color: var(--mainWhite);
+            width: 100%;
+            height: 100%;
+            .ChiTiet
+            {
+                .ChiTiet-right-header
+                {
+                    height: 40px;
+                    width: 100%;
+                    display: inline-flex;
+                    white-space: nowrap;
+                    padding: 5px;
+                    .img
+                    {
+                        width: 25px; 
+                        height: 25px; 
+                        background-size: 25px !important; 
+                        background-repeat: no-repeat;
+                        display: block;
+                    }/*img*/
+                    .ten-ban
+                    {
+                        font-size: large;
+                        margin-left: 10px;
+                    }
+                }/*ChiTiet-right-header*/
+
+                .ChiTiet-right-body
+                {
+                    .ChiTiet-details
+                    {
+                        height: 100%;
+                        overflow-y: scroll;
+                        height: 300px;
+                        width: 100%;
+                        padding: 0;
+                        .table
+                        {
+                            margin-bottom: 0;
+                            width: 100%;
+                            max-width: 100%;
+                            .row
+                            {
+                                padding: 0;
+                                width: 100%;
+                            }
+                            thead
+                            {
+                                display: table-header-group;
+                                vertical-align: middle;
+                                border-color: initial;
+                                tr
+                                {
+                                    vertical-align: inherit;
+                                    border-color: inherit;
+                                    th
+                                    {
+                                        text-align: center;
+                                        vertical-align: bottom;
+                                    }
+                                }
+                            }/*thead*/
+                            tbody
+                            {
+                                display: table-header-group;
+                                vertical-align: middle;
+                                border-color: initial;                            
+                            }/*tbody*/
+                        }
+                    }
+                }
+            }/*ChiTiet*/
+
+            .ChiTiet-footer
+            {
+                position: absolute;
+                top: 100%;
+                width: 100%;
+                white-space: nowrap;
+                padding: 5px;
+                .LuuMonAn-Info
+                {
+                    .row
+                    {
+                        width: 100%;
+                    }
+                }
+            }/*ChiTiet-right-footer*/
+        }/*tab-right*/
+    }/*ftco-sodo*/
+
+    .ftco-quanly
+    {
+        width: 100%;
+        margin: 0;
+        .modal-dialog
+        {
+            width: 100%;
+            height: 100%;
+            margin: auto;
+            .modal-content
+            {
+                .modal-footer
+                {   
+                    .btn
+                    {
+                        width: 100%;
+                    }
+                }
+            }
+        }/*modal-dialog*/
+    
+        .table-content
+        {
+            overflow-y: scroll;
+            height: 520px;
+            width: 100%;
+            padding: 0;
+            .table
+            {
+                margin-bottom: 0;
+                width: 100%;
+                max-width: 100%;
+                .row
+                {
+                    padding: 0;
+                    width: 100%;
+                }
+                thead
+                {
+                    display: table-header-group;
+                    vertical-align: middle;
+                    border-color: initial;
+                    tr
+                    {
+                        vertical-align: inherit;
+                        border-color: inherit;
+                        th
+                        {
+                            text-align: center;
+                            vertical-align: bottom;
+                        }
+                    }
+                }/*thead*/
+                tbody
+                {
+                    display: table-header-group;
+                    vertical-align: middle;
+                    border-color: initial;                            
+                }/*tbody*/
+            }
+        }/*table-content*/
+    }/*ftco-quanly*/
+
+    .login-section
+    {
+        .login-item
+        {
+            .login
+            {
+                width: 100%;
+                display: block;
+                padding: 0.8rem 1rem;
+                margin-bottom: 1.5rem;
+                text-decoration: none;
+                cursor: pointer;
+                border: none;
+                color: var(--mainWhite) !important;
+                outline: none;
+                i
+                {
+                    font-size: 1.4rem;
+                    margin: 1rem;
+                }
+                &:hover
+                {
+                    opacity: 0.8;
+                }
+            }/*login*/
+            .login-face
+            {
+                background: var(--mainFace);
+            }
+            .login-google
+            {
+                background: var(--mainGoogle);
+            }
+            .login-twitter
+            {
+                background: var(--mainTwitter);
+            }
+            h4
+            {
+                color: var(--mainWhite);
+                font-size: 2rem;
+            }
+            .login-form
+            {
+                .form-group
+                {
+                    position: relative;
+                    width: 100%;
+                    display: block;
+                    .form-control
+                    {
+                        border: transparent !important;
+                        border-bottom: 1px solid var(--mainGray) !important;
+                        height: 58px!important;
+                        padding-left: 0;
+                        padding-right: 0; 
+                        background: transparent!important;
+                        color: rgba(255,255,255,.9)!important;
+                        font-size: 13px;
+                        border-radius: 0px;
+                        box-shadow: none!important;
+                    }/*form-control*/
+                    .btn
+                    {
+                        border-radius: 0;
+                        background: var(--mainGreen);
+                        outline: none;
+                        border: 1px solid var(--mainGreen);
+                        font-size: 1rem;
+                        font-weight: 500;
+                        &:hover, &:focus
+                        {
+                            border: 1px solid var(--mainGreen);
+                            color: var(--mainGreen);
+                            background: transparent;
+                        }
+                    }/*btn*/
+                }/*form-group*/
+            }/*login-form*/
+        }/*login-item*/
+    }/*login-section*/
+    
+    @media screen and (max-width: 1200px)
+    {
+        .header
+        {
+            .show-menu-btn, .hide-menu-btn
+            {
+                display: block !important;
+                transition: 0.4s;
+                padding: 0 10px;
+            }
+            ul
+            {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 100%;
+                height: 100vh;
+                background:var(--mainBlack);
+                text-align: center;
+                transition: 0.7s;
+                padding: 100px 0 !important;
+                z-index: 1000;
+                a
+                {
+                    display: block ;
+                    padding: 20px 0;
+                }
+                .hide-menu-btn
+                {
+                    position: absolute;
+                    top: 10px;
+                    right: 10px;
+                }
+                .logo
+                {
+                    display: none !important; 
+                }
+            }
+
+            #check:checked ~ ul
+            {
+                right: 0 !important;
+            }
+        }/*end header*/
+
+        .banner
+        {
+            .carousel-item
+            {
+                height: auto;
+                img
+                {
+                    height: 100vh;
+                }
+            }
+            .img-pizza img
+            {
+                width: 300px;
+                height: 300px;
+                padding: 20px 0;
+            }
+        }
+        /*end banner*/
+
+        .ftco-sodo, .ftco-quanly, .gioithieu-section, .login-section, .ftco-section
+        {
+                position: absolute;
+                top: 80px;
+                bottom: 0;
+                left: 0;
+        }
+    }
+
+    @media screen and (max-width: 990px)
+    {
+        .services-wrap
+        {
+            width: 100%;
+        }
+    }
+    /*end reponsive*/
+}/*body*/

@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pizza-Hub</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+</head>
+<body>
+    <div class="wall">
+        <header class="header">
+            <input type="checkbox" name="" id="check">
+            <label for="check" class="show-menu-btn">
+                <i class="fas fa-pizza-slice"></i>
+            </label>
+        
+            <ul class="header-menu">
+                <a href="index.html">trang chủ</a>
+                <a href="gioithieu.html">giới thiệu</a>
+                <a href="monan.html">món ăn</a>
+                <a href="index.html" class="logo"><img src="img/Capture.PNG" alt=""></a>
+                <a href="sodo.html">Sơ đồ</a>
+                <a href="quanly.html">quản lý</a>
+                <a href="dangnhap.html">đăng nhập</a>
+
+                <label for="check" class="hide-menu-btn">
+                    <i class="fas fa-sign-out-alt"></i>              
+                </label>
+            </ul>
+        </header>  
+        
+        <section class="ftco-quanly">
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">thêm thông tin nhân viên</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                    <label class="control-label" for="ma_nv">Mã nhân viên</label>
+                                    <div>
+                                        <input type="text" class="form-control" id="txt_ma_nv" name="ma_nv" value="">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                    <label class="control-label" for="so_cmnd">CMND</label>
+                                    <div>
+                                        <input type="text" class="form-control" id="txt_so_cmnd" name="so_cmnd" value="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <label class="control-label" for="ma_nv">Tên nhân viên</label>
+                                    <div>
+                                        <input type="text" class="form-control" id="txt_ten_nv" name="ten_nv" value="">
+                                    </div>
+                                </div>
+                            </div> 
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                    <label class="control-label" for="sdt">Số điện thoại</label>
+                                    <div>
+                                        <input type="text" class="form-control" id="txt_sdt" name="sdt" value="">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                    <label class="control-label" for="dia_chi">Địa chỉ</label>
+                                    <div>
+                                        <input type="text" class="form-control" id="txt_dia_chi" name="dia_chi" value="">
+                                    </div>
+                                </div>                               
+                            </div> 
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                    <label class="control-label" for="ngay_sinh">Ngày sinh</label>
+                                    <div>
+                                        <input type="text" class="form-control" id="txt_ngay_sinh" name="ngay_sinh" value="">
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                    <label class="control-label" for="bo_phan">Bộ phận</label>
+                                    <div>
+                                        <select class="form-control" id="bo_phan" name="bo_phan">
+                                            <option selected="selected" value=""></option>
+                                            <option value="phucVu">PHỤC VỤ</option>
+                                            <option value="quanLy">QUẢN LÝ</option>
+                                            <option value="thuNgan">THU NGÂN</option>
+                                        </select>                                    
+                                    </div>
+                                </div>
+                            </div> 
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                    <label class="control-label" for="luong">Lương</label>
+                                    <div>
+                                        <input type="text" class="form-control" id="txt_luong" name="luong" value="0">
+                                    </div>
+                                </div>                                
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                    <label class="control-label" for="phu_cap">Phụ cấp</label>
+                                    <div>
+                                        <input type="text" class="form-control" id="txt_phu_cap" name="phu_cap" value="0">
+                                    </div>
+                                </div>                               
+                            </div> 
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                    <label class="control-label" for="hinh_anh">Hình ảnh</label>
+                                    <div>
+                                        <input type="file" class="form-control" id="txt_hinh_anh" name="hinh_anh" value="0">
+                                    </div>
+                                </div>                                
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                    <label class="control-label" for="ho_so">Hồ sơ</label>
+                                    <div>
+                                        <input type="file" class="form-control" id="txt_ho_so" name="ho_so" value="0">
+                                    </div>
+                                </div>                               
+                            </div>     
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <label class="control-label" for="ghi_chu">Ghi chú</label>
+                                    <div>
+                                        <input type="text" class="form-control" id="txt_ghi_chu" name="ghi_chu" value="">
+                                    </div>
+                                </div>                                                              
+                            </div>                                                                                                                                     
+                        </div>
+                        <div class="modal-footer">
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                    <button type="button" class="btn btn-success"><i class="fas fa-save"></i> Save changes</button>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                    <button type="button" class="btn btn-primary">Close</button>
+                                </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="them_nhan_vien col-6">
+                        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
+                            <i class="fas fa-user-plus"></i>
+                            <span class="btn-add">Thêm mới</span>                
+                        </button>
+                    </div>
+                    <div class="search_nhan_vien col-6">
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Tìm kiếm nhân viên">
+                    </div>
+                </div>
+                <div class="table-content mt-2">
+                    <table id="grid" class="table table-dark table-responsive">
+                        <thead>
+                            <tr>
+                                <th class="ma-nv">Mã NV</th>
+                                <th class="ten-nv">Tên NV</th>
+                                <th class="so-cmnd">CMND</th>
+                                <th class="ngay-sinh">Ngày sinh</th>
+                                <th class="so-dt">Số điện thoại</th>
+                                <th class="dia-chi">Địa chỉ</th>
+                                <th class="ten-bp">Bộ phận</th>
+                                <th class="so-luong">Lương</th>
+                                <th class="phu-cap">Phụ cấp</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="function" style="height:60px;">
+                                <td class="ma-nv v-align-middle">NV01</td>
+                                <td class="ten-nv v-align-middle">Cao Trung Thành</td>
+                                <td class="so-cmnd v-align-middle">123456789</td>
+                                <td class="ngay-sinh v-align-middle">24/08/1998</td>
+                                <td class="so-dt v-align-middle">0826966913</td>
+                                <td class="dia-chi v-align-middle">19 Bửu Đóa, Phước Long, Nha Trang</td>
+                                <td class="ten-bp v-align-middle">Nhân viên</td>
+                                <td class="so-luong v-align-middle">1000000</td>
+                                <td class="phu-cap v-align-middle">500000</td>
+                            </tr>
+                            <tr class="function" style="height:60px;">
+                                <td class="ma-nv v-align-middle">NV02</td>
+                                <td class="ten-nv v-align-middle">Nguyễn Đỗ Khai</td>
+                                <td class="so-cmnd v-align-middle">452178549</td>
+                                <td class="ngay-sinh v-align-middle">26/05/1977</td>
+                                <td class="so-dt v-align-middle">0182451541</td>
+                                <td class="dia-chi v-align-middle">2A Nguyễn Thiện Thuật, Biên Hòa, Nha Trang</td>
+                                <td class="ten-bp v-align-middle">Nhân viên</td>
+                                <td class="so-luong v-align-middle">1000000</td>
+                                <td class="phu-cap v-align-middle">500000</td>
+                            </tr>
+                            <tr class="function" style="height:60px;">
+                                <td class="ma-nv v-align-middle">NV03</td>
+                                <td class="ten-nv v-align-middle">Vũ Sương Gió</td>
+                                <td class="so-cmnd v-align-middle">456456789</td>
+                                <td class="ngay-sinh v-align-middle">11/10/1989</td>
+                                <td class="so-dt v-align-middle">0826966913</td>
+                                <td class="dia-chi v-align-middle">29 Lê Thánh Tôn, Vĩnh Hải, Nha Trang</td>
+                                <td class="ten-bp v-align-middle">Nhân viên</td>
+                                <td class="so-luong v-align-middle">1000000</td>
+                                <td class="phu-cap v-align-middle">500000</td>
+                            </tr>
+                            <tr class="function" style="height:60px;">
+                                <td class="ma-nv v-align-middle ">NV04</td>
+                                <td class="ten-nv v-align-middle">Cao Hoàng Bảo Ngân</td>
+                                <td class="so-cmnd v-align-middle">754852999</td>
+                                <td class="ngay-sinh v-align-middle">12/06/1998</td>
+                                <td class="so-dt v-align-middle">0991212999</td>
+                                <td class="dia-chi v-align-middle">14 Nguyễn Trãi, Phước Hải, Nha Trang</td>
+                                <td class="ten-bp v-align-middle">Nhân viên</td>
+                                <td class="so-luong v-align-middle">10000000</td>
+                                <td class="phu-cap v-align-middle">500000</td>
+                            </tr>
+                            <tr class="function" style="height:60px;">
+                                <td class="ma-nv v-align-middle">NV05</td>
+                                <td class="ten-nv v-align-middle">Trần Phong Vũ</td>
+                                <td class="so-cmnd v-align-middle">013476985</td>
+                                <td class="ngay-sinh v-align-middle">24/08/1998</td>
+                                <td class="so-dt v-align-middle">0826966913</td>
+                                <td class="dia-chi v-align-middle">19 Bửu Đóa, Phước Long, Nha Trang</td>
+                                <td class="ten-bp v-align-middle">Nhân viên</td>
+                                <td class="so-luong v-align-middle">1000000</td>
+                                <td class="phu-cap v-align-middle">500000</td>
+                            </tr>
+                            <tr class="function" style="height:60px;">
+                                <td class="ma-nv v-align-middle">NV06</td>
+                                <td class="ten-nv v-align-middle">Trịnh Thủ Khoa</td>
+                                <td class="so-cmnd v-align-middle">833457539</td>
+                                <td class="ngay-sinh v-align-middle">15/11/1978</td>
+                                <td class="so-dt v-align-middle">0826966913</td>
+                                <td class="dia-chi v-align-middle">19 Bửu Đóa, Phước Long, Nha Trang</td>
+                                <td class="ten-bp v-align-middle">Nhân viên</td>
+                                <td class="so-luong v-align-middle">1000000</td>
+                                <td class="phu-cap v-align-middle">500000</td>
+                            </tr>
+                            <tr class="function" style="height:60px;">
+                                <td class="ma-nv v-align-middle">NV07</td>
+                                <td class="ten-nv v-align-middle">Davis Kane</td>
+                                <td class="so-cmnd v-align-middle">123456789</td>
+                                <td class="ngay-sinh v-align-middle">04/05/1994</td>
+                                <td class="so-dt v-align-middle">0826966913</td>
+                                <td class="dia-chi v-align-middle">219 Trịnh Phong, Vĩnh Hải, Nha Trang</td>
+                                <td class="ten-bp v-align-middle">Manager</td>
+                                <td class="so-luong v-align-middle">1000000</td>
+                                <td class="phu-cap v-align-middle">500000</td>
+                            </tr>
+                            <tr class="function" style="height:60px;">
+                                <td class="ma-nv v-align-middle">NV08</td>
+                                <td class="ten-nv v-align-middle">Trần Ngọc Hiển</td>
+                                <td class="so-cmnd v-align-middle">123456789</td>
+                                <td class="ngay-sinh v-align-middle">24/08/1998</td>
+                                <td class="so-dt v-align-middle">0826966913</td>
+                                <td class="dia-chi v-align-middle">99 Quang Trung, Phước Hải, Nha Trang</td>
+                                <td class="ten-bp v-align-middle">Nhân viên</td>
+                                <td class="so-luong v-align-middle">1000000</td>
+                                <td class="phu-cap v-align-middle">500000</td>
+                            </tr>
+                            <tr class="function" style="height:60px;">
+                                <td class="ma-nv v-align-middle">NV09</td>
+                                <td class="ten-nv v-align-middle">Thăng Hà Phong</td>
+                                <td class="so-cmnd v-align-middle">795146789</td>
+                                <td class="ngay-sinh v-align-middle">29/02/1992</td>
+                                <td class="so-dt v-align-middle">0826966913</td>
+                                <td class="dia-chi v-align-m">45 Nguyễn Biểu, Vĩnh Phước, Nha Trang</td>
+                                <td class="ten-bp v-align-middle">Nhân viên</td>
+                                <td class="so-luong v-align-middle">1000000</td>
+                                <td class="phu-cap v-align-middle">500000</td>
+                            </tr>
+                            <tr class="function" style="height:60px;">
+                                <td class="ma-nv v-align-middle">NV10</td>
+                                <td class="ten-nv v-align-middle">Tầng Lưu Thượng</td>
+                                <td class="so-cmnd v-align-middle">123456789</td>
+                                <td class="ngay-sinh v-align-middle">08/08/1988</td>
+                                <td class="so-dt v-align-middle">0826966913</td>
+                                <td class="dia-chi v-align-middle">109 Lý Nam Đế, Phước Long, Nha Trang</td>
+                                <td class="ten-bp v-align-middle">Nhân viên</td>
+                                <td class="so-luong v-align-middle">1000000</td>
+                                <td class="phu-cap v-align-middle">500000</td>
+                            </tr>
+                            <tr class="function" style="height:60px;">
+                                <td class="ma-nv v-align-middle">NV11</td>
+                                <td class="ten-nv v-align-middle">Nghĩ Cho Thông</td>
+                                <td class="so-cmnd v-align-middle">753894789</td>
+                                <td class="ngay-sinh v-align-middle">20/12/1987</td>
+                                <td class="so-dt v-align-middle">0826966913</td>
+                                <td class="dia-chi v-align-middle">195B Trần Nhật Duật, Đồ Long, Nha Trang</td>
+                                <td class="ten-bp v-align-middle">Nhân viên</td>
+                                <td class="so-luong v-align-middle">1000000</td>
+                                <td class="phu-cap v-align-middle">500000</td>
+                            </tr>
+                            <tr class="function" style="height:60px;">
+                                <td class="ma-nv v-align-middle">NV12</td>
+                                <td class="ten-nv v-align-middle">Thông Não Chi</td>
+                                <td class="so-cmnd v-align-middle">123456789</td>
+                                <td class="ngay-sinh v-align-middle">05/05/1995</td>
+                                <td class="so-dt v-align-middle">0824567744</td>
+                                <td class="dia-chi v-align-middle">41 Bửu Đóa, Phước Long, Nha Trang</td>
+                                <td class="ten-bp v-align-middle">Nhân viên</td>
+                                <td class="so-luong v-align-middle">1000000</td>
+                                <td class="phu-cap v-align-middle">500000</td>
+                            </tr>
+                    </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

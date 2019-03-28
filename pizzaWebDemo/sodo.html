@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pizza-Hub</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+</head>
+<body>
+    <div class="wall">
+        <header class="header">
+            <input type="checkbox" name="" id="check">
+            <label for="check" class="show-menu-btn">
+                <i class="fas fa-pizza-slice"></i>
+            </label>
+        
+            <ul class="header-menu">
+                <a href="index.html">trang chủ</a>
+                <a href="gioithieu.html">giới thiệu</a>
+                <a href="monan.html">món ăn</a>
+                <a href="index.html" class="logo"><img src="img/Capture.PNG" alt=""></a>
+                <a href="sodo.html">Sơ đồ</a>
+                <a href="quanly.html">quản lý</a>
+                <a href="dangnhap.html">đăng nhập</a>
+
+                <label for="check" class="hide-menu-btn">
+                    <i class="fas fa-sign-out-alt"></i>              
+                </label>
+            </ul>
+        </header>  
+
+        <section class="ftco-sodo">
+            <div class="container-fluid">
+                <div class="row d-md-flex">
+                    <div class="col-md-6 tab-left">
+                        <div class="row">
+                            <div class="col-md-12 header-tab-left">
+                                <button class="tablink tablink_Left tablink_Left--Left" onclick="openPageLeft('DatBan', this, '#80BB03')"  id="defaultOpenLeft">Đặt Bàn</button>
+                                <button class="tablink tablink_Left tablink_Left--Right" onclick="openPageLeft('DatThucDon', this, '#80BB03')">Thực Đơn</button>
+                            </div>  
+                            <div class="col-md-12 body-tab-left mt-4">
+                                <div id="DatBan" class="DatBan tabcontent-left ml-3">
+                                    <div class="row">
+                                        <div class="col-md-12 nav-link-wrap md-6">
+                                            <div class="nav nav-pills" id="tang-tab" role="tablist" aria-orientation="vertical">
+                                                <a href="#tang-1" class="nav-link active" id="tang-1-tab" data-toggle="pill" aria-controls="tang-1" aria-selected="true">Tầng 1</a>
+                                                <a href="#tang-2" class="nav-link" id="tang-2-tab" data-toggle="pill" aria-controls="tang-2" aria-selected="false">Tầng 2</a>
+                                            </div>
+                                        </div><!--col-md-12 1-->
+        
+                                        <div class="col-md-12 d-flex align-items-center mt-4">
+                                            <div class="tab-content ftco-animate" id="tang-tabContent">
+                                                <div class="tab-pane fade show active" id="tang-1" role="tabpanel" aria-labelledby="tang-1-tab">
+                                                    <div class="row">
+                                                        <div class="tang T1 filter-t">
+                                                            <label class="ten-tang">Tầng 01</label>
+                                                            <div class="row tang-block">
+                                                                <div id="T1B01" class="TTV T1 tt-2 ban filter-tt">
+                                                                    <div class="check-circle animated fadeIn hide"><i class="fa fa-check-circle text-green"></i></div>
+                                                                    <input type="hidden" class="stt-rec" value="RMOA000013802">
+                                                                    <input type="hidden" class="ma-tt-ban" value="2">
+                                                                    <div class="img" style="background-image: url('img/BAN-1.png'); width: 60px; height: 60px;"></div>
+                                                                    <span class="ten-ban">BÀN 01</span>
+                                                                </div>
+                                                                <div id="T1B02" class="TTV T1 tt-0 ban ban-clicked filter-tt">
+                                                                    <div class="check-circle animated fadeIn"><i class="fa fa-check-circle text-green"></i></div>
+                                                                    <input type="hidden" class="stt-rec" value="">
+                                                                    <input type="hidden" class="ma-tt-ban" value="0">
+                                                                    <div class="img" style="background-image: url('img/BAN-1.png'); width: 60px; height: 60px;"></div>
+                                                                    <span class="ten-ban">BÀN 02</span>
+                                                                </div>
+                                                                <div id="T1B03" class="TTV T1 tt-0 ban filter-tt">
+                                                                    <div class="check-circle animated fadeIn hide"><i class="fa fa-check-circle text-green"></i></div>
+                                                                    <input type="hidden" class="stt-rec" value="">
+                                                                    <input type="hidden" class="ma-tt-ban" value="0">
+                                                                    <div class="img" style="background-image: url('img/BAN-1.png'); width: 60px; height: 60px;"></div>
+                                                                    <span class="ten-ban">BÀN 03</span>
+                                                                </div>
+                                                                <div id="T1B04" class="TTV T1 tt-0 ban filter-tt">
+                                                                    <div class="check-circle animated fadeIn hide"><i class="fa fa-check-circle text-green"></i></div>
+                                                                    <input type="hidden" class="stt-rec" value="">
+                                                                    <input type="hidden" class="ma-tt-ban" value="0">
+                                                                    <div class="img" style="background-image: url('img/BAN-1.png'); width: 60px; height: 60px;"></div>
+                                                                    <span class="ten-ban">BÀN 04</span>
+                                                                </div>
+                                                                <div id="T1B05" class="TTV T1 tt-0 ban filter-tt">
+                                                                    <div class="check-circle animated fadeIn hide"><i class="fa fa-check-circle text-green"></i></div>
+                                                                    <input type="hidden" class="stt-rec" value="">
+                                                                    <input type="hidden" class="ma-tt-ban" value="0">
+                                                                    <div class="img" style="background-image: url('img/BAN-1.png'); width: 60px; height: 60px;"></div>
+                                                                    <span class="ten-ban">BÀN 05</span>
+                                                                </div>
+                                                                <div id="T1B06" class="TTV T1 tt-0 ban filter-tt">
+                                                                    <div class="check-circle animated fadeIn hide"><i class="fa fa-check-circle text-green"></i></div>
+                                                                    <input type="hidden" class="stt-rec" value="">
+                                                                    <input type="hidden" class="ma-tt-ban" value="0">
+                                                                    <div class="img" style="background-image: url('img/BAN-1.png'); width: 60px; height: 60px;"></div>
+                                                                    <span class="ten-ban">BÀN 06</span>
+                                                                </div>
+                                                                <div id="T1B07" class="TTV T1 tt-0 ban filter-tt">
+                                                                    <div class="check-circle animated fadeIn hide"><i class="fa fa-check-circle text-green"></i></div>
+                                                                    <input type="hidden" class="stt-rec" value="">
+                                                                    <input type="hidden" class="ma-tt-ban" value="0">
+                                                                    <div class="img" style="background-image: url('img/BAN-1.png'); width: 60px; height: 60px;"></div>
+                                                                    <span class="ten-ban">BÀN 07</span>
+                                                                </div>
+                                                                <div id="T1B08" class="TTV T1 tt-0 ban filter-tt">
+                                                                    <div class="check-circle animated fadeIn hide"><i class="fa fa-check-circle text-green"></i></div>
+                                                                    <input type="hidden" class="stt-rec" value="">
+                                                                    <input type="hidden" class="ma-tt-ban" value="0">
+                                                                    <div class="img" style="background-image: url('img/BAN-1.png'); width: 60px; height: 60px;"></div>
+                                                                    <span class="ten-ban">BÀN 08</span>
+                                                                </div>
+                                                                <div id="T1B09" class="TTV T1 tt-0 ban filter-tt">
+                                                                    <div class="check-circle animated fadeIn hide"><i class="fa fa-check-circle text-green"></i></div>
+                                                                    <input type="hidden" class="stt-rec" value="">
+                                                                    <input type="hidden" class="ma-tt-ban" value="0">
+                                                                    <div class="img" style="background-image: url('img/BAN-1.png'); width: 60px; height: 60px;"></div>
+                                                                    <span class="ten-ban">BÀN 09</span>
+                                                                </div>
+                                                                <div id="T1B10" class="TTV T1 tt-0 ban filter-tt">
+                                                                    <div class="check-circle animated fadeIn hide"><i class="fa fa-check-circle text-green"></i></div>
+                                                                    <input type="hidden" class="stt-rec" value="">
+                                                                    <input type="hidden" class="ma-tt-ban" value="0">
+                                                                    <div class="img" style="background-image: url('img/BAN-1.png'); width: 60px; height: 60px;"></div>
+                                                                    <span class="ten-ban">BÀN 10</span>
+                                                                </div>
+                                                                <div id="T1B11" class="TTV T1 tt-0 ban filter-tt">
+                                                                    <div class="check-circle animated fadeIn hide"><i class="fa fa-check-circle text-green"></i></div>
+                                                                    <input type="hidden" class="stt-rec" value="">
+                                                                    <input type="hidden" class="ma-tt-ban" value="0">
+                                                                    <div class="img" style="background-image: url('img/BAN-1.png'); width: 60px; height: 60px;"></div>
+                                                                    <span class="ten-ban">BÀN 11</span>
+                                                                </div>
+                                                                <div id="T1B12" class="TTV T1 tt-0 ban filter-tt">
+                                                                    <div class="check-circle animated fadeIn hide"><i class="fa fa-check-circle text-green"></i></div>
+                                                                    <input type="hidden" class="stt-rec" value="">
+                                                                    <input type="hidden" class="ma-tt-ban" value="0">
+                                                                    <div class="img" style="background-image: url('img/BAN-1.png'); width: 60px; height: 60px;"></div>
+                                                                    <span class="ten-ban">BÀN 12</span>
+                                                                </div>
+                                                                <div id="T1B13" class="TTV T1 tt-0 ban filter-tt">
+                                                                    <div class="check-circle animated fadeIn hide"><i class="fa fa-check-circle text-green"></i></div>
+                                                                    <input type="hidden" class="stt-rec" value="">
+                                                                    <input type="hidden" class="ma-tt-ban" value="0">
+                                                                    <div class="img" style="background-image: url('img/BAN-1.png'); width: 60px; height: 60px;"></div>
+                                                                    <span class="ten-ban">BÀN 13</span>
+                                                                </div>
+                                                                <div id="T1B14" class="TTV T1 tt-0 ban filter-tt">
+                                                                    <div class="check-circle animated fadeIn hide"><i class="fa fa-check-circle text-green"></i></div>
+                                                                    <input type="hidden" class="stt-rec" value="">
+                                                                    <input type="hidden" class="ma-tt-ban" value="0">
+                                                                    <div class="img" style="background-image: url('img/BAN-1.png'); width: 60px; height: 60px;"></div>
+                                                                    <span class="ten-ban">BÀN 14</span>
+                                                                </div>
+                                                                <div id="T1B15" class="TTV T1 tt-0 ban filter-tt">
+                                                                    <div class="check-circle animated fadeIn hide"><i class="fa fa-check-circle text-green"></i></div>
+                                                                    <input type="hidden" class="stt-rec" value="">
+                                                                    <input type="hidden" class="ma-tt-ban" value="0">
+                                                                    <div class="img" style="background-image: url('img/BAN-1.png'); width: 60px; height: 60px;"></div>
+                                                                    <span class="ten-ban">BÀN 15</span>
+                                                                </div>
+                                                            </div>
+                                                        </div><!--T1-->
+                                                    </div><!--row-->
+                                                </div><!--Tang 1-->
+                        
+                                                <div class="tab-pane fade" id="tang-2" role="tabpanel" aria-labelledby="tang-2-tab">
+                                                    <div class="row">
+                                                        <div class="tang T2 filter-t">
+                                                            <label class="ten-tang">Tầng 02</label>
+                                                            <div class="row tang-block">
+                                                                <div id="T2B01" class="TTV T2 tt-2 ban filter-tt">
+                                                                    <div class="check-circle animated fadeIn hide"><i class="fa fa-check-circle text-green"></i></div>
+                                                                    <input type="hidden" class="stt-rec" value="RMOA000013802">
+                                                                    <input type="hidden" class="ma-tt-ban" value="2">
+                                                                    <div class="img" style="background-image: url('img/BAN-1.png');"></div>
+                                                                    <span class="ten-ban">BÀN 16</span>
+                                                                </div>
+                                                                <div id="T2B02" class="TTV T2 tt-0 ban ban-clicked filter-tt">
+                                                                    <div class="check-circle animated fadeIn"><i class="fa fa-check-circle text-green"></i></div>
+                                                                    <input type="hidden" class="stt-rec" value="">
+                                                                    <input type="hidden" class="ma-tt-ban" value="0">
+                                                                    <div class="img" style="background-image: url('img/BAN-1.png');"></div>
+                                                                    <span class="ten-ban">BÀN 17</span>
+                                                                </div>
+                                                                <div id="T2B03" class="TTV T2 tt-0 ban filter-tt">
+                                                                    <div class="check-circle animated fadeIn hide"><i class="fa fa-check-circle text-green"></i></div>
+                                                                    <input type="hidden" class="stt-rec" value="">
+                                                                    <input type="hidden" class="ma-tt-ban" value="0">
+                                                                    <div class="img" style="background-image: url('img/BAN-1.png');"></div>
+                                                                    <span class="ten-ban">BÀN 18</span>
+                                                                </div>
+                                                                <div id="T2B04" class="TTV T2 tt-0 ban filter-tt">
+                                                                    <div class="check-circle animated fadeIn hide"><i class="fa fa-check-circle text-green"></i></div>
+                                                                    <input type="hidden" class="stt-rec" value="">
+                                                                    <input type="hidden" class="ma-tt-ban" value="0">
+                                                                    <div class="img" style="background-image: url('img/BAN-1.png');"></div>
+                                                                    <span class="ten-ban">BÀN 19</span>
+                                                                </div>
+                                                                <div id="T2B05" class="TTV T2 tt-0 ban filter-tt">
+                                                                    <div class="check-circle animated fadeIn hide"><i class="fa fa-check-circle text-green"></i></div>
+                                                                    <input type="hidden" class="stt-rec" value="">
+                                                                    <input type="hidden" class="ma-tt-ban" value="0">
+                                                                    <div class="img" style="background-image: url('img/BAN-1.png');"></div>
+                                                                    <span class="ten-ban">BÀN 20</span>
+                                                                </div>
+                                                                <div id="T2B06" class="TTV T2 tt-0 ban filter-tt">
+                                                                    <div class="check-circle animated fadeIn hide"><i class="fa fa-check-circle text-green"></i></div>
+                                                                    <input type="hidden" class="stt-rec" value="">
+                                                                    <input type="hidden" class="ma-tt-ban" value="0">
+                                                                    <div class="img" style="background-image: url('img/BAN-1.png');"></div>
+                                                                    <span class="ten-ban">BÀN 21</span>
+                                                                </div>
+                                                                <div id="T2B07" class="TTV T2 tt-0 ban filter-tt">
+                                                                    <div class="check-circle animated fadeIn hide"><i class="fa fa-check-circle text-green"></i></div>
+                                                                    <input type="hidden" class="stt-rec" value="">
+                                                                    <input type="hidden" class="ma-tt-ban" value="0">
+                                                                    <div class="img" style="background-image: url('img/BAN-1.png');"></div>
+                                                                    <span class="ten-ban">BÀN 22</span>
+                                                                </div>
+                                                                <div id="T2B08" class="TTV T2 tt-0 ban filter-tt">
+                                                                    <div class="check-circle animated fadeIn hide"><i class="fa fa-check-circle text-green"></i></div>
+                                                                    <input type="hidden" class="stt-rec" value="">
+                                                                    <input type="hidden" class="ma-tt-ban" value="0">
+                                                                    <div class="img" style="background-image: url('img/BAN-1.png');"></div>
+                                                                    <span class="ten-ban">BÀN 23</span>
+                                                                </div>
+                                                                <div id="T2B09" class="TTV T2 tt-0 ban filter-tt">
+                                                                    <div class="check-circle animated fadeIn hide"><i class="fa fa-check-circle text-green"></i></div>
+                                                                    <input type="hidden" class="stt-rec" value="">
+                                                                    <input type="hidden" class="ma-tt-ban" value="0">
+                                                                    <div class="img" style="background-image: url('img/BAN-1.png');"></div>
+                                                                    <span class="ten-ban">BÀN 24</span>
+                                                                </div>
+                                                                <div id="T2B10" class="TTV T2 tt-0 ban filter-tt">
+                                                                    <div class="check-circle animated fadeIn hide"><i class="fa fa-check-circle text-green"></i></div>
+                                                                    <input type="hidden" class="stt-rec" value="">
+                                                                    <input type="hidden" class="ma-tt-ban" value="0">
+                                                                    <div class="img" style="background-image: url('img/BAN-1.png');"></div>
+                                                                    <span class="ten-ban">BÀN 25</span>
+                                                                </div>
+                                                                <div id="T2B11" class="TTV T2 tt-0 ban filter-tt">
+                                                                    <div class="check-circle animated fadeIn hide"><i class="fa fa-check-circle text-green"></i></div>
+                                                                    <input type="hidden" class="stt-rec" value="">
+                                                                    <input type="hidden" class="ma-tt-ban" value="0">
+                                                                    <div class="img" style="background-image: url('img/BAN-1.png');"></div>
+                                                                    <span class="ten-ban">BÀN 26</span>
+                                                                </div>
+                                                                <div id="T2B12" class="TTV T2 tt-0 ban filter-tt">
+                                                                    <div class="check-circle animated fadeIn hide"><i class="fa fa-check-circle text-green"></i></div>
+                                                                    <input type="hidden" class="stt-rec" value="">
+                                                                    <input type="hidden" class="ma-tt-ban" value="0">
+                                                                    <div class="img" style="background-image: url('img/BAN-1.png');"></div>
+                                                                    <span class="ten-ban">BÀN 27</span>
+                                                                </div>
+                                                                <div id="T2B13" class="TTV T2 tt-0 ban filter-tt">
+                                                                    <div class="check-circle animated fadeIn hide"><i class="fa fa-check-circle text-green"></i></div>
+                                                                    <input type="hidden" class="stt-rec" value="">
+                                                                    <input type="hidden" class="ma-tt-ban" value="0">
+                                                                    <div class="img" style="background-image: url('img/BAN-1.png');"></div>
+                                                                    <span class="ten-ban">BÀN 28</span>
+                                                                </div>
+                                                                <div id="T2B14" class="TTV T2 tt-0 ban filter-tt">
+                                                                    <div class="check-circle animated fadeIn hide"><i class="fa fa-check-circle text-green"></i></div>
+                                                                    <input type="hidden" class="stt-rec" value="">
+                                                                    <input type="hidden" class="ma-tt-ban" value="0">
+                                                                    <div class="img" style="background-image: url('img/BAN-1.png');"></div>
+                                                                    <span class="ten-ban">BÀN 29</span>
+                                                                </div>
+                                                                <div id="T2B15" class="TTV T2 tt-0 ban filter-tt">
+                                                                    <div class="check-circle animated fadeIn hide"><i class="fa fa-check-circle text-green"></i></div>
+                                                                    <input type="hidden" class="stt-rec" value="">
+                                                                    <input type="hidden" class="ma-tt-ban" value="0">
+                                                                    <div class="img" style="background-image: url('img/BAN-1.png');"></div>
+                                                                    <span class="ten-ban">BÀN 30</span>
+                                                                </div>
+                                                            </div>
+                                                        </div><!--T2-->                                                    
+                                                    </div><!--row-->
+                                                </div><!--Tang 2-->
+                                            </div><!--tab-content-->
+                                        </div><!--col-md-12 2-->                                     
+                                    </div><!--row-->
+                                </div><!--Đặt Bàn-->
+                                    
+                                <div id="DatThucDon" class="DatThucDon tabcontent-left">
+                                    <div class="row">
+                                        <div class="col-md-12 nav-link-wrap md-6">
+                                            <div class="nav ftco-animate nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                                                <a href="#DatThucDon-1" class="nav-link active" id="DatThucDon-1-tab" data-toggle="pill" aria-controls="v-pills-1" aria-selected="true">Pizza</a>
+                                                <a href="#DatThucDon-2" class="nav-link" id="DatThucDon-2-tab" data-toggle="pill" aria-controls="v-pills-2" aria-selected="false">Drinks</a>
+                                                <a href="#DatThucDon-3" class="nav-link" id="DatThucDon-3-tab" data-toggle="pill" aria-controls="v-pills-3" aria-selected="false">Burgers</a>
+                                                <a href="#DatThucDon-4" class="nav-link" id="DatThucDon-4-tab" data-toggle="pill" aria-controls="v-pills-4" aria-selected="false">Pasta</a>
+                                            </div>
+                                        </div><!--col-md-12 1-->
+                                        <div class="col-md-12 d-flex align-items-center mt-4">
+                                            <div class="tab-content ftco-animate" id="DatThucDon-tabContent">
+                                                <div class="tab-pane fade show active" id="DatThucDon-1" role="tabpanel" aria-labelledby="DatThucDon-1-tab">
+                                                    <div class="row">
+                                                        <div class="col-md-4 text-center">
+                                                            <div class="DatThucDon-wrap">
+                                                                <a href="#" class="DatThucDon-img img mb-4" style="background-image: url('img/pizza-1.jpg');"></a>
+                                                                <div class="text">
+                                                                    <h3><a href="#">Itallian Pizza</a></h3>
+                                                                    <p class="price"><span>$2.90</span></p>
+                                                                    <p><a href="#" class="btn btn-white btn-outline-white">Đặt Món</a></p>
+                                                                </div>
+                                                            </div>                                                                    
+                                                        </div>
+                                                        <div class="col-md-4 text-center">
+                                                            <div class="DatThucDon-wrap">
+                                                                <a href="#" class="DatThucDon-img img mb-4" style="background-image: url('img/pizza-2.jpg');"></a>
+                                                                <div class="text">
+                                                                    <h3><a href="#">Itallian Pizza</a></h3>
+                                                                    <p class="price"><span>$2.90</span></p>
+                                                                    <p><a href="#" class="btn btn-white btn-outline-white">Đặt Món</a></p>
+                                                                </div>
+                                                            </div>                                                                        
+                                                        </div>
+                                                        <div class="col-md-4 text-center">
+                                                            <div class="DatThucDon-wrap">
+                                                                <a href="#" class="DatThucDon-img img mb-4" style="background-image: url('img/pizza-3.jpg');"></a>
+                                                                <div class="text">
+                                                                    <h3><a href="#">Itallian Pizza</a></h3>
+                                                                    <p class="price"><span>$2.90</span></p>
+                                                                    <p><a href="#" class="btn btn-white btn-outline-white">Đặt Món</a></p>
+                                                                </div>
+                                                            </div>                                                                        
+                                                        </div>
+                                                    </div><!--row-->
+                                                </div><!--Pizza-->
+                        
+                                                <div class="tab-pane fade" id="DatThucDon-2" role="tabpanel" aria-labelledby="DatThucDon-2-tab">
+                                                    <div class="row">
+                                                        <div class="col-md-4 text-center">
+                                                            <div class="DatThucDon-wrap">
+                                                                <a href="#" class="DatThucDon-img img mb-4" style="background-image: url('img/drink-1.jpg');"></a>
+                                                                <div class="text">
+                                                                    <h3><a href="#">Lemonade Juice</a></h3>
+                                                                    <p class="price"><span>$2.90</span></p>
+                                                                    <p><a href="#" class="btn btn-white btn-outline-white">Đặt món</a></p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4 text-center">
+                                                            <div class="DatThucDon-wrap">
+                                                                <a href="#" class="DatThucDon-img img mb-4" style="background-image: url('img/drink-2.jpg');"></a>
+                                                                <div class="text">
+                                                                    <h3><a href="#">Lemonade Juice</a></h3>
+                                                                    <p class="price"><span>$2.90</span></p>
+                                                                    <p><a href="#" class="btn btn-white btn-outline-white">Đặt món</a></p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4 text-center">
+                                                            <div class="DatThucDon-wrap">
+                                                                <a href="#" class="DatThucDon-img img mb-4" style="background-image: url('img/drink-3.jpg');"></a>
+                                                                <div class="text">
+                                                                    <h3><a href="#">Lemonade Juice</a></h3>
+                                                                    <p class="price"><span>$2.90</span></p>
+                                                                    <p><a href="#" class="btn btn-white btn-outline-white">Đặt món</a></p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div><!--Drinks-->
+                        
+                                                <div class="tab-pane fade" id="DatThucDon-3" role="tabpanel" aria-labelledby="DatThucDon-3-tab">
+                                                    <div class="row">
+                                                        <div class="col-md-4 text-center">
+                                                            <div class="DatThucDon-wrap">
+                                                                <a href="#" class="DatThucDon-img img mb-4" style="background-image: url('img/burger-1.jpg');"></a>
+                                                                <div class="text">
+                                                                    <h3><a href="#">UK Burgers</a></h3>
+                                                                    <p class="price"><span>$2.90</span></p>
+                                                                    <p><a href="#" class="btn btn-white btn-outline-white">Đặt món</a></p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4 text-center">
+                                                            <div class="DatThucDon-wrap">
+                                                                <a href="#" class="DatThucDon-img img mb-4" style="background-image: url('img/burger-2.jpg');"></a>
+                                                                <div class="text">
+                                                                    <h3><a href="#">UK Burgers</a></h3>
+                                                                    <p class="price"><span>$2.90</span></p>
+                                                                    <p><a href="#" class="btn btn-white btn-outline-white">Đặt món</a></p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4 text-center">
+                                                            <div class="DatThucDon-wrap">
+                                                                <a href="#" class="DatThucDon-img img mb-4" style="background-image: url('img/burger-3.jpg');"></a>
+                                                                <div class="text">
+                                                                    <h3><a href="#">UK Burgers</a></h3>
+                                                                    <p class="price"><span>$2.90</span></p>
+                                                                    <p><a href="#" class="btn btn-white btn-outline-white">Đặt món</a></p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div><!--Burger-->
+                        
+                                                <div class="tab-pane fade" id="DatThucDon-4" role="tabpanel" aria-labelledby="DatThucDon-4-tab">
+                                                    <div class="row">
+                                                        <div class="col-md-4 text-center">
+                                                            <div class="DatThucDon-wrap">
+                                                                <a href="#" class="DatThucDon-img img mb-4" style="background-image: url('img/pasta-1.jpg');"></a>
+                                                                <div class="text">
+                                                                    <h3><a href="#">Pasta Spagetty</a></h3>
+                                                                    <p class="price"><span>$3.45</span></p>
+                                                                    <p><a href="#" class="btn btn-white btn-outline-white">Đặt món</a></p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4 text-center">
+                                                            <div class="DatThucDon-wrap">
+                                                                <a href="#" class="DatThucDon-img img mb-4" style="background-image: url('img/pasta-2.jpg');"></a>
+                                                                <div class="text">
+                                                                    <h3><a href="#">Pasta Spagetty</a></h3>
+                                                                    <p class="price"><span>$3.45</span></p>
+                                                                    <p><a href="#" class="btn btn-white btn-outline-white">Đặt món</a></p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-4 text-center">
+                                                            <div class="DatThucDon-wrap">
+                                                                <a href="#" class="DatThucDon-img img mb-4" style="background-image: url('img/pasta-3.jpg');"></a>
+                                                                <div class="text">
+                                                                    <h3><a href="#">Pasta Spagetty</a></h3>
+                                                                    <p class="price"><span>$3.45</span></p>
+                                                                    <p><a href="#" class="btn btn-white btn-outline-white">Đặt món</a></p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div><!--Pasta-->
+                                            </div><!--tab-content-->
+                                        </div><!--col-md-12 2-->     
+                                    </div><!--row-->
+                                </div><!--Đặt Thực Đơn-->
+                            </div>  
+                        </div>
+                    </div><!--col-md-8-->
+                    <div class="col-md-6 tab-right">
+                        <div class="row">
+                            <div class="col-md-12 header-tab-right">
+                                <button class="tablink tablink_Right tablink_Right--Left" onclick="openPageRight('ChiTiet', this, '#80BB03')" id="defaultOpenRight">Chi Tiết</button>
+                                <button class="tablink tablink_Right tablink_Right--Right" onclick="openPageRight('MoRong', this, '#80BB03')">Mở Rộng</button>
+                            </div> <!--header-tab-right-->
+
+                            <div class="col-md-12 body-tab-right mt-3">
+                                <div id="ChiTiet" class="ChiTiet tabcontent-right">
+                                    <div class="ChiTiet-right-header">
+                                        <div class="img pull-left" style="background-image: url('img/BAN-1.png');"></div>
+                                        <div class="ten-ban pull-left ml-2"></div>
+                                    </div>
+                                    <div class="ChiTiet-right-body ChiTiet-content">
+                                        <div class="ChiTiet-details active" id="ChiTiet-details">
+                                            <table id="table-details grid" class="table table-responsive">
+                                                <thead class="table-header">
+                                                    <tr class="row">
+                                                        <th class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                                            <div>#</div>
+                                                        </th>    
+                                                        <th class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                                            <div>Diễn giải</div>
+                                                        </th>
+                                                        <th class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                                            <div class="hidden-sm hidden-xs">Đơn giá</div>
+                                                        </th>
+                                                        <th class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                                            <div class="hidden-sm hidden-xs">Số lượng</div>
+                                                        </th>
+                                                        <th class="col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                                                            <div class="hidden-sm hidden-xs">Thành tiền</div>
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody class="table-body">
+                                                    <tr class="row">    
+                                                        <td class="col-1 col-lg-1 col-md-1 col-sm-1 col-xs-1 text-center">       
+                                                            <input type="button" class="but-detail-xoa btn btn-danger" value="X">    
+                                                        </td>    
+                                                        <td class="col-2 col-lg-4 col-md-4 col-sm-4 col-xs-4 text-left">        
+                                                            <input type="hidden" class="ma-vt form-control" readonly="" value="CAFE002">        
+                                                            <input type="hidden" class="ma-dvt form-control" readonly="" value="T_LY">        
+                                                            <input type="hidden" class="ghi-chu form-control" readonly="" value="">        
+                                                            <label class="ten-vt">Cafe sữa nóng/đá</label>    
+                                                        </td>    
+                                                        <td class="col-3 col-lg-2 col-md-2 col-sm-2 col-xs-2">        
+                                                            <input type="text" class="gia number form-control hide" value="15,000">            
+                                                        </td>    <td class="col-4 col-lg-2 col-md-2 col-sm-2 col-xs-2">        
+                                                        <div class="row">            
+                                                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">                
+                                                                <input type="number" class="so-luong form-control number" min="1" value="1" onchange="UpdateSumValueRow(this)" onfocus="jQuery(this).select();">            
+                                                            </div>            
+                                                            <label class="sl-cb col-lg-3 col-md-3 hidden-sm hidden-xs" title="Số lượng đã chế biến">/0</label>                 
+                                                        </div>    
+                                                        </td>    
+                                                            <td class="col-5 col-lg-3 col-md-3 col-sm-3 col-xs-3 text-right">                
+                                                                <label class="tien2">15,000</label>    
+                                                            </td>
+                                                    </tr>
+                                                    <tr class="row">    
+                                                            <td class="col-1 col-lg-1 col-md-1 col-sm-1 col-xs-1 text-center">       
+                                                                <input type="button" class="but-detail-xoa btn btn-danger" value="X">    
+                                                            </td>    
+                                                            <td class="col-2 col-lg-4 col-md-4 col-sm-4 col-xs-4 text-left">        
+                                                                <input type="hidden" class="ma-vt form-control" readonly="" value="CAFE002">        
+                                                                <input type="hidden" class="ma-dvt form-control" readonly="" value="T_LY">        
+                                                                <input type="hidden" class="ghi-chu form-control" readonly="" value="">        
+                                                                <label class="ten-vt">Cafe sữa nóng/đá</label>    
+                                                            </td>    
+                                                            <td class="col-3 col-lg-2 col-md-2 col-sm-2 col-xs-2">        
+                                                                <input type="text" class="gia number form-control hide" value="15,000">            
+                                                            </td>    <td class="col-4 col-lg-2 col-md-2 col-sm-2 col-xs-2">        
+                                                            <div class="row">            
+                                                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">                
+                                                                    <input type="number" class="so-luong form-control number" min="1" value="1" onchange="UpdateSumValueRow(this)" onfocus="jQuery(this).select();">            
+                                                                </div>            
+                                                                <label class="sl-cb col-lg-3 col-md-3 hidden-sm hidden-xs" title="Số lượng đã chế biến">/0</label>                 
+                                                            </div>    
+                                                            </td>    
+                                                                <td class="col-5 col-lg-3 col-md-3 col-sm-3 col-xs-3 text-right">                
+                                                                    <label class="tien2">15,000</label>    
+                                                                </td>
+                                                    </tr>
+                                                    <tr class="row">    
+                                                            <td class="col-1 col-lg-1 col-md-1 col-sm-1 col-xs-1 text-center">       
+                                                                <input type="button" class="but-detail-xoa btn btn-danger" value="X">    
+                                                            </td>    
+                                                            <td class="col-2 col-lg-4 col-md-4 col-sm-4 col-xs-4 text-left">        
+                                                                <input type="hidden" class="ma-vt form-control" readonly="" value="CAFE002">        
+                                                                <input type="hidden" class="ma-dvt form-control" readonly="" value="T_LY">        
+                                                                <input type="hidden" class="ghi-chu form-control" readonly="" value="">        
+                                                                <label class="ten-vt">Cafe sữa nóng/đá</label>    
+                                                            </td>    
+                                                            <td class="col-3 col-lg-2 col-md-2 col-sm-2 col-xs-2">        
+                                                                <input type="text" class="gia number form-control hide" value="15,000">            
+                                                            </td>    <td class="col-4 col-lg-2 col-md-2 col-sm-2 col-xs-2">        
+                                                            <div class="row">            
+                                                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">                
+                                                                    <input type="number" class="so-luong form-control number" min="1" value="1" onchange="UpdateSumValueRow(this)" onfocus="jQuery(this).select();">            
+                                                                </div>            
+                                                                <label class="sl-cb col-lg-3 col-md-3 hidden-sm hidden-xs" title="Số lượng đã chế biến">/0</label>                 
+                                                            </div>    
+                                                            </td>    
+                                                                <td class="col-5 col-lg-3 col-md-3 col-sm-3 col-xs-3 text-right">                
+                                                                    <label class="tien2">15,000</label>    
+                                                                </td>
+                                                    </tr>
+                                                    <tr class="row">    
+                                                            <td class="col-1 col-lg-1 col-md-1 col-sm-1 col-xs-1 text-center">       
+                                                                <input type="button" class="but-detail-xoa btn btn-danger" value="X">    
+                                                            </td>    
+                                                            <td class="col-2 col-lg-4 col-md-4 col-sm-4 col-xs-4 text-left">        
+                                                                <input type="hidden" class="ma-vt form-control" readonly="" value="CAFE002">        
+                                                                <input type="hidden" class="ma-dvt form-control" readonly="" value="T_LY">        
+                                                                <input type="hidden" class="ghi-chu form-control" readonly="" value="">        
+                                                                <label class="ten-vt">Cafe sữa nóng/đá</label>    
+                                                            </td>    
+                                                            <td class="col-3 col-lg-2 col-md-2 col-sm-2 col-xs-2">        
+                                                                <input type="text" class="gia number form-control hide" value="15,000">            
+                                                            </td>    <td class="col-4 col-lg-2 col-md-2 col-sm-2 col-xs-2">        
+                                                            <div class="row">            
+                                                                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">                
+                                                                    <input type="number" class="so-luong form-control number" min="1" value="1" onchange="UpdateSumValueRow(this)" onfocus="jQuery(this).select();">            
+                                                                </div>            
+                                                                <label class="sl-cb col-lg-3 col-md-3 hidden-sm hidden-xs" title="Số lượng đã chế biến">/0</label>                 
+                                                            </div>    
+                                                            </td>    
+                                                                <td class="col-5 col-lg-3 col-md-3 col-sm-3 col-xs-3 text-right">                
+                                                                    <label class="tien2">15,000</label>    
+                                                                </td>
+                                                    </tr>
+                                                    <tr class="row">    
+                                                                <td class="col-1 col-lg-1 col-md-1 col-sm-1 col-xs-1 text-center">       
+                                                                    <input type="button" class="but-detail-xoa btn btn-danger" value="X">    
+                                                                </td>    
+                                                                <td class="col-2 col-lg-4 col-md-4 col-sm-4 col-xs-4 text-left">        
+                                                                    <input type="hidden" class="ma-vt form-control" readonly="" value="CAFE002">        
+                                                                    <input type="hidden" class="ma-dvt form-control" readonly="" value="T_LY">        
+                                                                    <input type="hidden" class="ghi-chu form-control" readonly="" value="">        
+                                                                    <label class="ten-vt">Cafe sữa nóng/đá</label>    
+                                                                </td>    
+                                                                <td class="col-3 col-lg-2 col-md-2 col-sm-2 col-xs-2">        
+                                                                    <input type="text" class="gia number form-control hide" value="15,000">            
+                                                                </td>    <td class="col-4 col-lg-2 col-md-2 col-sm-2 col-xs-2">        
+                                                                <div class="row">            
+                                                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">                
+                                                                        <input type="number" class="so-luong form-control number" min="1" value="1" onchange="UpdateSumValueRow(this)" onfocus="jQuery(this).select();">            
+                                                                    </div>            
+                                                                    <label class="sl-cb col-lg-3 col-md-3 hidden-sm hidden-xs" title="Số lượng đã chế biến">/0</label>                 
+                                                                </div>    
+                                                                </td>    
+                                                                    <td class="col-5 col-lg-3 col-md-3 col-sm-3 col-xs-3 text-right">                
+                                                                        <label class="tien2">15,000</label>    
+                                                                    </td>
+                                                    </tr>
+                                                    <tr class="row">    
+                                                                    <td class="col-1 col-lg-1 col-md-1 col-sm-1 col-xs-1 text-center">       
+                                                                        <input type="button" class="but-detail-xoa btn btn-danger" value="X">    
+                                                                    </td>    
+                                                                    <td class="col-2 col-lg-4 col-md-4 col-sm-4 col-xs-4 text-left">        
+                                                                        <input type="hidden" class="ma-vt form-control" readonly="" value="CAFE002">        
+                                                                        <input type="hidden" class="ma-dvt form-control" readonly="" value="T_LY">        
+                                                                        <input type="hidden" class="ghi-chu form-control" readonly="" value="">        
+                                                                        <label class="ten-vt">Cafe sữa nóng/đá</label>    
+                                                                    </td>    
+                                                                    <td class="col-3 col-lg-2 col-md-2 col-sm-2 col-xs-2">        
+                                                                        <input type="text" class="gia number form-control hide" value="15,000">            
+                                                                    </td>    <td class="col-4 col-lg-2 col-md-2 col-sm-2 col-xs-2">        
+                                                                    <div class="row">            
+                                                                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">                
+                                                                            <input type="number" class="so-luong form-control number" min="1" value="1" onchange="UpdateSumValueRow(this)" onfocus="jQuery(this).select();">            
+                                                                        </div>            
+                                                                        <label class="sl-cb col-lg-3 col-md-3 hidden-sm hidden-xs" title="Số lượng đã chế biến">/0</label>                 
+                                                                    </div>    
+                                                                    </td>    
+                                                                        <td class="col-5 col-lg-3 col-md-3 col-sm-3 col-xs-3 text-right">                
+                                                                            <label class="tien2">15,000</label>    
+                                                                        </td>
+                                                    </tr>
+                                                    <tr class="row">    
+                                                        <td class="col-1 col-lg-1 col-md-1 col-sm-1 col-xs-1 text-center">       
+                                                            <input type="button" class="but-detail-xoa btn btn-danger" value="X">    
+                                                        </td>    
+                                                        <td class="col-2 col-lg-4 col-md-4 col-sm-4 col-xs-4 text-left">        
+                                                            <input type="hidden" class="ma-vt form-control" readonly="" value="CAFE002">        
+                                                            <input type="hidden" class="ma-dvt form-control" readonly="" value="T_LY">        
+                                                            <input type="hidden" class="ghi-chu form-control" readonly="" value="">        
+                                                            <label class="ten-vt">Cafe sữa nóng/đá</label>    
+                                                        </td>    
+                                                        <td class="col-3 col-lg-2 col-md-2 col-sm-2 col-xs-2">        
+                                                            <input type="text" class="gia number form-control hide" value="15,000">            
+                                                        </td>    <td class="col-4 col-lg-2 col-md-2 col-sm-2 col-xs-2">        
+                                                        <div class="row">            
+                                                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">                
+                                                                <input type="number" class="so-luong form-control number" min="1" value="1" onchange="UpdateSumValueRow(this)" onfocus="jQuery(this).select();">            
+                                                            </div>            
+                                                            <label class="sl-cb col-lg-3 col-md-3 hidden-sm hidden-xs" title="Số lượng đã chế biến">/0</label>                 
+                                                        </div>    
+                                                        </td>    
+                                                            <td class="col-5 col-lg-3 col-md-3 col-sm-3 col-xs-3 text-right">                
+                                                                <label class="tien2">15,000</label>    
+                                                            </td>
+                                                    </tr>
+                                                    <tr class="row">    
+                                                        <td class="col-1 col-lg-1 col-md-1 col-sm-1 col-xs-1 text-center">       
+                                                            <input type="button" class="but-detail-xoa btn btn-danger" value="X">    
+                                                        </td>    
+                                                        <td class="col-2 col-lg-4 col-md-4 col-sm-4 col-xs-4 text-left">        
+                                                            <input type="hidden" class="ma-vt form-control" readonly="" value="CAFE002">        
+                                                            <input type="hidden" class="ma-dvt form-control" readonly="" value="T_LY">        
+                                                            <input type="hidden" class="ghi-chu form-control" readonly="" value="">        
+                                                            <label class="ten-vt">Cafe sữa nóng/đá</label>    
+                                                        </td>    
+                                                        <td class="col-3 col-lg-2 col-md-2 col-sm-2 col-xs-2">        
+                                                            <input type="text" class="gia number form-control hide" value="15,000">            
+                                                        </td>    <td class="col-4 col-lg-2 col-md-2 col-sm-2 col-xs-2">        
+                                                        <div class="row">            
+                                                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">                
+                                                                <input type="number" class="so-luong form-control number" min="1" value="1" onchange="UpdateSumValueRow(this)" onfocus="jQuery(this).select();">            
+                                                            </div>            
+                                                            <label class="sl-cb col-lg-3 col-md-3 hidden-sm hidden-xs" title="Số lượng đã chế biến">/0</label>                 
+                                                        </div>    
+                                                        </td>    
+                                                            <td class="col-5 col-lg-3 col-md-3 col-sm-3 col-xs-3 text-right">                
+                                                                <label class="tien2">15,000</label>    
+                                                            </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>    
+                                        </div>
+                                    </div>
+                                </div><!--Chi Tiết-->
+                                        
+                                <div id="MoRong" class="MoRong tabcontent-right" style="display: none;">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                            <p>Ngày vào:</p>
+                                            <input type="date" class="form-control ngayvao" id="txt_ngayvao" name="ngayvao" value="" max="datePresent()">
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                            <p>Giờ vào:</p>
+                                            <input type="time" class="form-control giovao" id="txt_giovao" name="giovao" value="">
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                            <p>Số điện thoại</p>
+                                            <input type="text" class="form-control sodienthoai" id="txt_sodienthoai" name="sodienthoai" value="">
+                                        </div>
+                                    </div>
+                                    <div class="row mt-3">
+                                        <div class="col-lg-8 col-md-8 col-sm-6 col-xs-12">
+                                            <p>Khách hàng:</p>
+                                            <input type="text" class="form-control khachhang" id="txt_ten_kh" name="ngay_vao" value="">
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                            <p>Tình trạng</p>
+                                            <select class="form-control" id="look_tinhtrang_ban" name="ma_tinhtrang_ban">
+                                                <option value="0">Trống</option>
+                                                <option value="1">Đặt bàn</option>
+                                                <option value="2">Phục vụ</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-3">
+                                        <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                                            <p>Số Khách:</p>
+                                            <input type="number" class="form-control sokhach" id="txt_sokhach" name="sokhach" value="" min="1">
+                                        </div>
+                                        <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
+                                            <p>Ghi chú:</p>
+                                            <input type="text" class="form-control ghichu" id="txt_ghichu" name="ghichu" value="">
+                                        </div>         
+                                    </div>
+                                    <div class="row mt-3">
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <p>Địa chỉ:</p>
+                                            <input type="number" class="form-control diachi" id="txt_diachi" name="diachi" value="" min="1">
+                                        </div>
+                                    </div>
+                                </div><!--Mở Rộng-->
+                            </div><!--body-tab-right-->
+
+                            <div class="col-md-12 ChiTiet-footer mt-5">
+                                <div class="LuuMonAn-Info">
+                                    <div class="row">
+                                        <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 button-luu">
+                                            <button type="button" id="btn_luu" class="btn btn-success">Lưu Món</button>
+                                        </div><!--Lưu món ăn-->
+                                        <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 Subs-totals">
+                                            <div class="row" style="font-size: large">
+                                                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                                                    <div class="hidden-sm hidden-xs">Tổng cộng:</div>
+                                                </div>
+                                                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                                                    <input type="hidden" id="txt_t_so_luong" value="0">
+                                                    <label id="lab_t_so_luong" class="pull-right">0</label>
+                                                </div>
+
+                                            </div><!--Tổng Tiền-->
+                                        </div>
+                                    </div>
+                                    <div class="row mt-4">
+                                        <div class="temp col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                                            <button type="button" id="but_tinh_tien" class="btn btn-danger">Thanh toán</button>
+                                        </div><!--Thanh Toán-->
+                                        <div class="totals col-lg-9 col-md-9 col-sm-12 col-xs-12">
+                                            <div class="row" style="font-size: large">
+                                                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                                                    <div class="hidden-md hidden-sm hidden-xs">TỔNG THANH TOÁN:</div>
+                                                </div>
+                                                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+                                                    <input type="hidden" id="txt_t_thanh_toan" value="0">
+                                                    <label id="lab_t_thanh_toan" class="pull-right">0</label>
+                                                </div>
+                                            </div>
+                                        </div><!--Tổng tiền-->
+                                    </div>
+                                </div><!--LuuMonAn-Info-->
+                            </div><!--Footer-tab-->
+                        </div>
+                    </div>
+                </div>                     
+            </div>
+        </section><!--ftco-menu-->
+    </div>
+
+    <script src="js/index.js"></script>
+</body>
+</html>
